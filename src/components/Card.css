@@ -1,0 +1,36 @@
+.card {
+  /* border: 2px solid red; */
+  /* width: 200px;
+    height: 350px; */
+}
+
+.card-item {
+  border-radius: 1rem;
+  background-color: rgba(128, 128, 128, 0.555);
+  box-shadow: 1px 1px 10px;
+}
+
+.card-item img {
+  width: 280px;
+  height: 320px;
+  border-radius: 1rem;
+}
+
+.card-item h2 {
+  font-size: 15px;
+}
+
+.card .statistics {
+  width: 280px;
+  height: 320px;
+  border-radius: 1rem;
+  background-color: rgba(128, 128, 128, 0.555);
+  box-shadow: 1px 1px 10px;
+}
+.card .statistics li {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  padding-top: 25px;
+}
