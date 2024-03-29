@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    background-color: brown;
+}
+
+img{
+    margin-left: 2rem;
+}
+
+header h1{
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px
+}

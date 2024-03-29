@@ -1,12 +1,15 @@
 import './App.css';
+import Header from "./components/Header.jsx";
 import Main from './components/Main';
 import {data} from "./asset/data.js"
+
 
 
 function App() {
   return (
     <div>
-   <Main data= {data}/>
+      <Header />
+      <Main data={data} />
     </div>
   );
 }

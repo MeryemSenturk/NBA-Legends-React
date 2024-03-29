@@ -8,15 +8,17 @@ const Main = (props) => {
 
     const {name, hour, image} = data
 
-    const handleClear = () =>{
-     <p>0 lesson today</p>
-        }
+    const handleButton = () => {
+       
+           alert("tıklandı")
+    }
        
   return (
     <main>
-      <div className='cards'>
+      <h1>6 lessons today</h1>
+      <div className="cards">
         {data.map((i) => (
-          <div className='card-item'>
+          <div className="card-item">
             <img src={i.image} alt="" />
             <div>
               <p>Lesson Name : {i.name} </p>
@@ -26,7 +28,9 @@ const Main = (props) => {
         ))}
       </div>
 
-      <button onClick={handleClear}>Clear</button>
+      <div className='btn'>
+        <button onClick={handleButton}>Clear</button>
+      </div>
     </main>
   );
 }
