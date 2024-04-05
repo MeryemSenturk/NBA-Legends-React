@@ -1,15 +1,41 @@
-import React from 'react'
+import React, { useState } from "react";
+import { FaTrash } from "react-icons/fa";
 
-const ToDoList = ({todo, setTodo}) => {
-
+const TodoList = ({ todos, setTodos }) => {
+  const deleteTodo = (id) => {
+    let filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
+    localStorage.setItem("todos", JSON.stringify(filteredTodos));
+  };
 
   return (
-    <form>
-        <input type="text" value={inp} className='form-control' placeholder="enter your todo"/>
+    <div className=" container todo-list  mt-3">
+      <div className="row justify-content-center">
+        <div className="col-lg-8 col-md-10">
+          <h2 className="text-center fs-1 text-info ">Todos</h2>
+          <ul>
+            {todos?.length ? (
+              todos.map(({ id, text }) => (
+                <div
+                  className="list d-flex justify-content-between align-items-center"
+                  key={id}
+                >
+                  <li className="fs-3 text-info">{text}</li>
 
-        <button className='btn btn-success text-nowrap'>Add Task</button>
-    </form>
-  )
-}
+                  <FaTrash
+                    className="fs-3 text-primary"
+                    onClick={() => deleteTodo(id)}
+                  />
+                </div>
+              ))
+            ) : (
+              <p className="text-center mt-5 fs-3">No tasks yet!</p>
+            )}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default ToDoList
+export default TodoList;
