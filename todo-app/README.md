@@ -1,6 +1,6 @@
 # Todo App With React
 
-![Todo App With React]()
+![Todo App With React](./todo%20react.gif)
 
 ## Description
 
@@ -15,4 +15,4 @@ Builded a Todo App using ReactJS.
 
 ## Demo
 
-[Todo App With React]()
+[Todo App With React](https://nba-legends-flax.vercel.app )
