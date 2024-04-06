@@ -22,9 +22,10 @@ const Header = ({ todos, setTodos }) => {
 
   return (
     <div>
-      My Todo List
+      <h1 className="m-5">Todo List</h1>
+
       <Form.Control
-        className="form-control"
+        className="form-control w-50 m-auto mb-2"
         placeholder="Enter new todo..."
         aria-label="Enter new todo..."
         onChange={(e) => setInput(e.target.value)}
